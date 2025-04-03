@@ -1,0 +1,9 @@
+# Ignorera alla filer med filändelsen .jar
+*.jar
+
+# Ignorera alla filer i katalogerna out och target
+out/
+target/
+
+# Tillåt .html-filer under target
+!target/*.html
