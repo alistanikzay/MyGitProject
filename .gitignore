@@ -7,3 +7,4 @@ target/
 
 # Tillåt .html-filer under target
 !target/*.html
+nystorfil.bin
