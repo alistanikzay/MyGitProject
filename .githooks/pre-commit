@@ -17,7 +17,7 @@ for file in $(git diff --cached --name-only); do
     if [ -f "$file" ]; then
         size=$(get_file_size "$file")
         if [ $size -gt $max_size ]; then
-            size_mb=$(echo "scale=2; $size/1048576" | bc)
+            size_mb=$((size / 1048576))
             echo "Error: $file är större än 1MB ($size_mb MB)"
             exit_code=1
         fi
