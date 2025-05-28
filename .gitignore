@@ -1,10 +1,14 @@
-# Ignorera alla filer med filändelsen .jar
+# Ignorera alla .jar-filer
 *.jar
 
 # Ignorera alla filer i katalogerna out och target
 out/
 target/
 
-# Tillåt .html-filer under target
+# Tillåt katalogen target så Git kollar inuti
+!target/
+# Tillåt .html-filer i target
 !target/*.html
+
+# Ignorera testfilen du skapade
 nystorfil.bin
