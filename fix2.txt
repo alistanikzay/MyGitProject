@@ -1,3 +1,5 @@
+feature2
+fix 2
 # Steg för att skapa och hantera fix2.txt
 
 # 1. Växla till feature2 och skapa fix-filerna
@@ -26,3 +28,4 @@ git commit -m "Fix merge conflict in README.md"
 # 6. Cherry-picka commit som la till fix2.txt
 git cherry-pick 2a59d4c
 # (Löste konflikt med git add fix2.txt och git cherry-pick --continue)
+ main
