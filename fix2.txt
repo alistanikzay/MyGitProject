@@ -1,0 +1,28 @@
+# Steg för att skapa och hantera fix2.txt
+
+# 1. Växla till feature2 och skapa fix-filerna
+git checkout -b feature2
+echo fix 1 > fix1.txt
+git add fix1.txt
+git commit -m "La till fix1.txt"
+echo fix 2 > fix2.txt
+git add fix2.txt
+git commit -m "La till fix2.txt"
+
+# 2. Byt tillbaka till main och se att filerna försvinner
+git checkout main
+
+# 3. Ta bort fix2.txt från main (om den fanns där)
+git rm fix2.txt
+git commit -m "Remove fix2.txt from main branch"
+
+# 4. Hämta ändringar från remote
+git pull origin main
+
+# 5. Lösa merge-konflikt i README.md
+git add README.md
+git commit -m "Fix merge conflict in README.md"
+
+# 6. Cherry-picka commit som la till fix2.txt
+git cherry-pick 2a59d4c
+# (Löste konflikt med git add fix2.txt och git cherry-pick --continue)
